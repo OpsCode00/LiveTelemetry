@@ -1,0 +1,50 @@
+VERSION ""
+
+
+BS_:
+
+BU_:
+
+
+BO_ 257 BmsInfoMessage1: 8 Vector__XXX
+ SG_ CellMaxVoltage : 16|16@1+ (1,0) [0|65535] "mV" Vector__XXX
+ SG_ CellMaxTemp : 32|16@1- (1,0) [-32768|32767] " C" Vector__XXX
+ SG_ CellMeanTemp : 48|16@1- (1,0) [-32768|32767] " C" Vector__XXX
+ SG_ BatteryVoltage : 0|16@1+ (0.1,0) [0|6553] "V" Vector__XXX
+
+BO_ 258 BmsInfoMessage2: 8 Vector__XXX
+ SG_ SOC : 16|16@1+ (0.01,0) [0|655] "%" Vector__XXX
+ SG_ CellMinVoltage : 0|16@1+ (1,0) [0|65535] "mV" Vector__XXX
+
+BO_ 683 Vcu2: 8 Vector__XXX
+ SG_ Steering : 39|16@0- (0.070516,0) [-2310.03|2310.03] "deg" Vector__XXX
+ SG_ BrakeRear : 23|16@0+ (0.1,0) [0|6553] "Bar" Vector__XXX
+ SG_ BrakeFront : 7|16@0+ (0.1,0) [0|6553] "Bar" Vector__XXX
+
+BO_ 428 Vcu3: 8 Vector__XXX
+ SG_ APPS2 : 7|16@0+ (0.1,0) [0|6553] "%" Vector__XXX
+
+BO_ 429 Vcu4: 8 Vector__XXX
+ SG_ APPS1 : 7|16@0+ (0.1,0) [0|6553] "%" Vector__XXX
+
+BO_ 430 Vcu5: 8 Vector__XXX
+ SG_ TempMotorRight : 55|16@0+ (0.1,0) [0|6553] "'C" Vector__XXX
+ SG_ TempMotorLeft : 39|16@0+ (0.1,0) [0|6553] "'C" Vector__XXX
+ SG_ TempInvRight : 23|16@0+ (0.1,0) [0|6553] "'C" Vector__XXX
+ SG_ TempInvLeft : 7|16@0+ (0.1,0) [0|6553] "'C" Vector__XXX
+
+BO_ 434 Vcu9: 8 Vector__XXX
+ SG_ VehicleSpeed : 7|16@0- (0.01,0) [-327|327] "m/s" Vector__XXX
+
+BO_ 435 Vcu10: 8 Vector__XXX
+ SG_ Map : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ TractionEnable : 8|1@0- (1,0) [0|1] "" Vector__XXX
+ SG_ TorqueVectoringEnable : 16|1@0- (1,0) [0|1] "" Vector__XXX
+ SG_ MaxPower : 31|8@0+ (1,0) [0|255] "kW" Vector__XXX
+ SG_ MaxTorque : 39|8@0+ (1,0) [0|255] "Nm" Vector__XXX
+ SG_ MaxRegen : 47|8@0+ (1,0) [0|255] "-Nm" Vector__XXX
+ SG_ TcMap : 55|8@0+ (1,0) [0|255] "" Vector__XXX
+
+
+
+
