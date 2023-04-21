@@ -1,7 +1,6 @@
 import threading
 from tkinter import Label
 import paho.mqtt.client as mqtt
-import signalClass
 import cantools
 import performance
 

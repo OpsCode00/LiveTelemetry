@@ -16,7 +16,7 @@ class GUI:
         print("Initialize canvas..\n")
         self.__root.title("UniprRacingTeam LiveTelemetry")
         print("Initialize title..\n")
-        self.__root.iconbitmap("Logo_UniPR_Racing_Team.ico")
+        #self.__root.iconbitmap("Logo_UniPR_Racing_Team.ico")
         print("Initialize icon..\n")
         self.__root.resizable(False, False)
 
@@ -26,7 +26,7 @@ class GUI:
         self.__graphList = ["BrakeFront", "BrakeRear", "APPS1", "APPS2", "SOC", "BatteryVoltage"]
         print("Dictionary created..\n")
 
-        self.__telemetry_db = cantools.database.load_file('Telemetry.dbc')
+        self.__telemetry_db = cantools.database.load_file("client\Telemetry.dbc")
         print("Database loaded..\n")
 
         # Ciclo per popolare i dizionari di label contenente il nome del messasggio e per quelle contenenti il valore del segnale
@@ -47,9 +47,9 @@ class GUI:
 
 
         print("Creating GUI..\n")
-        self.__img = ImageTk.PhotoImage(Image.open("Logo_UniPR_Racing_Team.png").resize([207,120]))
-        self.__logo = tkinter.Label(self.__root, image = self.__img)
-        self.__logo.place(x=20, y=50)
+        #self.__img = ImageTk.PhotoImage(Image.open("Logo_UniPR_Racing_Team.png").resize([207,120]))
+        #self.__logo = tkinter.Label(self.__root, image = self.__img)
+        #self.__logo.place(x=20, y=50)
         self.__title1 = tkinter.Label(self.__root, text="Live Telemetry", fg="black", font=("Arial", 28))
         self.__title1.place(x=250, y=90)
         self.__title2 = tkinter.Label(self.__root, text="Client", fg="black", font=("Arial", 28))
@@ -128,7 +128,7 @@ class GUI:
     def plotGraph(self, signalName):
         fig = plt.figure()
         plt.get_current_fig_manager().set_window_title(signalName)
-        plt.get_current_fig_manager().window.wm_iconbitmap("Logo_UniPR_Racing_Team.ico")
+        #plt.get_current_fig_manager().window.wm_iconbitmap("Logo_UniPR_Racing_Team.ico")
         ax = fig.add_subplot(1, 1, 1)
         xs = []
         ys = []
@@ -160,3 +160,5 @@ class GUI:
         plt.subplots_adjust(bottom=0.20)
         plt.title(signalName)
         plt.ylabel(signalName)
+
+GUI()

@@ -9,7 +9,7 @@ class Performance():
     """
     def __init__(self) -> None:
         
-        self.__telemetry_db = cantools.database.load_file("Telemetry.dbc")
+        self.__telemetry_db = cantools.database.load_file("client\Telemetry.dbc")
 
         self.__BitSended = 0
 

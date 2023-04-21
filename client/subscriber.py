@@ -28,7 +28,7 @@ root.title("UniprRacingTeam LiveTelemetry")
 signalValueDict = {}
 label_dic = {}
 graph_list = ["BrakeFront", "BrakeRear", "APPS1", "APPS2", "SOC", "BatteryVoltage"]
-db = cantools.database.load_file('Telemetry.dbc')
+db = cantools.database.load_file("client\Telemetry.dbc")
 
 # Ciclo per popolare i dizionari di label contenente il nome del messasggio e per quelle contenenti il valore del segnale
 for message in db.messages:
